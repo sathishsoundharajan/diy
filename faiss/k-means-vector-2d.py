@@ -140,11 +140,11 @@ for i in range(max_iter):
     # Update centroids for next iteration
     centroids = mean_centroids
 
-# Handle case where max iterations reached without convergence
-if i == max_iter - 1:
-    print(f"Max iterations ({max_iter}) reached without convergence")
-    print(f"Final Centroids: {mean_centroids}")
-    print(f"Final Clusters: {mean_clusters}")
+    # Handle case where max iterations reached without convergence
+    if i == max_iter - 1:
+        print(f"Max iterations ({max_iter}) reached without convergence")
+        print(f"Final Centroids: {mean_centroids}")
+        print(f"Final Clusters: {mean_clusters}")
 
 # Visualize initial and final clusters
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))  # Create two subplots
